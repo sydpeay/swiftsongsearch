@@ -1,0 +1,153 @@
+
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Swift Song Search</title>
+
+    <link href="/search/style.css" rel="stylesheet" type="text/css" media="all">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400&display=swap" rel="stylesheet">
+
+    <script src="/search/search.js"></script>
+  </head>
+
+  <body id="body" class="midnights">
+
+    <header>
+      <div id="headerContent">
+        <div id="headerContainer">
+          <h1>Swift Song Search</h1>
+          <div id="themeBtnDiv">
+            <button class="themeBtn" id="debutTheme" onclick="changeTheme('debut')"></button>
+            <button class="themeBtn" id="fearlessTheme" onclick="changeTheme('fearless')"></button>
+            <button class="themeBtn" id="speakNowTheme" onclick="changeTheme('speakNow')"></button>
+            <button class="themeBtn" id="redTheme" onclick="changeTheme('red')"></button>
+            <button class="themeBtn" id="ts1989Theme" onclick="changeTheme('ts1989')"></button>
+            <button class="themeBtn" id="reputationTheme" onclick="changeTheme('reputation')"></button>
+            <button class="themeBtn" id="loverTheme" onclick="changeTheme('lover')"></button>
+            <button class="themeBtn" id="folkloreTheme" onclick="changeTheme('folklore')"></button>
+            <button class="themeBtn" id="evermoreTheme" onclick="changeTheme('evermore')"></button>
+            <button class="themeBtn" id="midnightsTheme" onclick="changeTheme('midnights')"></button>
+          </div>
+        </div>
+        <div id="searchBar">
+          <select id="fieldDropdown" name="fieldDropdown">
+            <option value="allFields">All fields</option>
+            <option value="songTitle">Song Title</option>
+            <option value="writers">Writers</option>
+            <option value="producers">Producers</option>
+          </select>
+          <input id="searchInput" type="text" placeholder="can I ask you a question?">
+          <button id="searchFieldButton" class="submit" onclick="submit()">Search</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div id="mainContainer">
+        <!-- filter screen that shows on opening -->
+        <div id="filterScreen">
+          <button id="filterAcc"><h2>Filters</h2></button>
+          <div id="filterPanel">
+            <div class="col">
+              <h3>Album</h3>
+              <div id="albumChecks" class="checkScroll">
+                <input id="checkTaylorSwift" type="checkbox">
+                <label for="checkTaylorSwift">Taylor Swift</label><br>
+                <input id="checkFearless" type="checkbox">
+                <label for="checkFearless">Fearless</label><br>
+                <input id="checkSpeakNow" type="checkbox">
+                <label for="checkSpeakNow">Speak Now</label><br>
+                <input id="checkRed" type="checkbox">
+                <label for="checkRed">Red</label><br>
+                <input id="check1989" type="checkbox">
+                <label for="check1989">1989</label><br>
+                <input id="checkReputation" type="checkbox">
+                <label for="checkReputation">Reputation</label><br>
+                <input id="checkLover" type="checkbox">
+                <label for="checkLover">Lover</label><br>
+                <input id="checkFolklore" type="checkbox">
+                <label for="checkFolklore">Folklore</label><br>
+                <input id="checkEvermore" type="checkbox">
+                <label for="checkEvermore">Evermore</label><br>
+                <input id="checkMidnights" type="checkbox">
+                <label for="checkMidnights">Midnights</label><br>
+                <input id="checkFearlessTV" type="checkbox">
+                <label for="checkFearlessTV">Fearless (Taylor's Version)</label><br>
+                <input id="checkRedTV" type="checkbox">
+                <label for="checkRedTV">Red (Taylor's Version)</label><br>
+                <input id="checkHoliday" type="checkbox">
+                <label for="checkHoliday">The Taylor Swift Holiday Collection</label><br>
+                <input id="checkBeautifulEyes" type="checkbox">
+                <label for="checkBeautifulEyes">Beautiful Eyes</label><br>
+                <input id="checkSpeakNowLive" type="checkbox">
+                <label for="checkSpeakNowLive">Speak Now World Tour - Live</label><br>
+                <input id="checkFolkloreLPSS" type="checkbox">
+                <label for="checkFolkloreLPSS">Folklore: The Long Pond Studio Sessions</label><br>
+              </div>
+            </div>
+            <div class="col">
+              <h3>Collection</h3>
+              <div id="collectionChecks" class="checkScroll">
+                <input id="checkStudioAlbums" type="checkbox">
+                <label for="checkStudioAlbums">Studio Albums</label><br>
+                <input id="checkRerecordings" type="checkbox">
+                <label for="checkRerecordings">Rerecordings</label><br>
+                <input id="checkExtendedPlays" type="checkbox">
+                <label for="checkExtendedPlays">Extended Plays</label><br>
+                <input id="checkLiveAlbums" type="checkbox">
+                <label for="checkLiveAlbums">Live Albums</label><br>
+              </div>
+              <div id="miscFilters">
+                <input id="checkAltVersion" type="checkbox">
+                <label for="checkAltVersion">Exclude alternate versions</label><br>
+                <input id="checkTaylorOwns" type="checkbox">
+                <label for="checkTaylorOwns">Songs Taylor owns</label><br>
+                <input id="checkSelfWritten" type="checkbox">
+                <label for="checkSelfWritten">Self-written songs</label><br>
+              </div>
+              <button id="filterSearchBtn" class="submit" onclick="submit()">Search</button>
+            </div>
+          </div>
+        </div>
+        <!-- end opening filter screen -->
+
+        <div id="resultsScreen">
+          <div id="resultsDisplay">
+            <!-- results from JS -->
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div id="footerContent">
+        <p>Swift Song Search is pure HTML, CSS, and JavaScript search engine of Taylor Swift's catalog created by me, Syd. You can check out my other work related to Taylor Swift, fame, and fandom at <a href="/index.html" target="_blank">swiftology.neocities.org</a>. If you notice bugs, have feedback, or want to help with data entry to expand the use of this database, get in touch at <a href="mailto:neoswiftology@gmail.com">neoswiftology@gmail.com</a>.</p>
+        <nav>
+          <a href="/index.html">Swiftology Home</a>
+          <a href="/bookshelf.html">Books Beside Your Bed</a>
+          <a href="/writing.html">Writing in my Room</a>
+          <a href="http://neoswiftology.tumblr.com" target="_blank">Stalk Me on the Internet</a>
+        </nav>
+      </div>
+    </footer>
+
+  </body>
+
+</html>
