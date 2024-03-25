@@ -1,0 +1,470 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.debut {
+	--bodyFont: "Kalam", Arial, sans-serif;
+	--accFont: "Sacramento", cursive;
+	--textStyle: normal;
+	--textTrans: none;
+	--fontSize: 16px;
+	--fontColor: darkgreen;
+	--main: lightcyan;
+	--bg: turquoise;
+	--acc1: seagreen;
+	--acc2: #b2e6d5;
+}
+
+.fearless {
+	--bodyFont: "Montserrat", Arial, sans-serif;
+	--accFont: "Montserrat", Arial, sans-serif;
+	--textStyle: normal;
+	--textTrans: uppercase;
+	--fontSize: 16px;
+	--fontColor: maroon;
+	--main: ivory;
+	--bg: goldenrod;
+	--acc1: saddlebrown;
+	--acc2: lightgoldenrodyellow;
+}
+
+.speakNow {
+	--bodyFont: Garamond, serif;
+	--accFont: "Alex Brush", cursive;
+	--textStyle: normal;
+	--textTrans: none;
+	--fontSize: 18px;
+	--fontColor: midnightblue;
+	--main: white;
+	--bg: mediumorchid;
+	--acc1: indigo;
+	--acc2: lavender;
+}
+
+.red {
+	--bodyFont: "Montserrat", Arial, sans-serif;
+	--accFont: "Bebas Neue", "Montserrat", Arial, sans-serif;
+	--textStyle: normal;
+	--textTrans: uppercase;
+	--fontSize: 16px;
+	--fontColor: maroon;
+	--main: white;
+	--bg: sandybrown;
+	--acc1: firebrick;
+	--acc2: antiquewhite;
+}
+
+.ts1989 {
+	--bodyFont: "Montserrat", Arial, sans-serif;
+	--accFont: "Permanent Marker", "Montserrat", Arial, sans-serif;
+	--textStyle: normal;
+	--textTrans: uppercase;
+	--fontSize: 14px;
+	--fontColor: midnightblue;
+	--main: white;
+	--bg: linear-gradient(to bottom, lightskyblue 0%, peachpuff 100%);
+	--acc1: lightskyblue;
+	--acc2: antiquewhite;
+}
+
+.reputation {
+	--bodyFont: "Times New Roman", serif;
+	--accFont: "UnifrakturMaguntia", "Times New Roman", serif;
+	--textStyle: normal;
+	--textTrans: lowercase;
+	--fontSize: 16px;
+	--fontColor: black;
+	--main: white;
+	--bg: dimgray;
+	--acc1: #004d00;
+	--acc2: lightgray;
+}
+
+.lover {
+	--bodyFont: "Montserrat", Arial, sans-serif;
+	--accFont: "Parisienne", cursive;
+	--textStyle: normal;
+	--textTrans: none;
+	--fontSize: 16px;
+	--fontColor: midnightblue;
+	--main: lavenderblush;
+	--bg: linear-gradient(to bottom, #ff99ff 0%, #99ccff 100%);
+	--acc1: hotpink;
+	--acc2: pink;
+}
+
+.folklore {
+	--bodyFont: "IM Fell DW Pica", Garamond, serif;
+	--accFont: "IM Fell DW Pica", Garamond, serif;
+	--textStyle: italic;
+	--textTrans: lowercase;
+	--fontSize: 16px;
+	--fontColor: black;
+	--main: aliceblue;
+	--bg: lightslategray;
+	--acc1: darkslategray;
+	--acc2: darkseagreen;
+}
+
+.evermore {
+	--bodyFont: "IM Fell DW Pica", Garamond, serif;
+	--accFont: "IM Fell DW Pica", Garamond, serif;
+	--textStyle: italic;
+	--textTrans: lowercase;
+	--fontSize: 16px;
+	--fontColor: maroon;
+	--main: ivory;
+	--bg: goldenrod;
+	--acc1: firebrick;
+	--acc2: blanchedalmond;
+}
+
+.midnights {
+	--bodyFont: "Open Sans", Arial, sans-serif;
+	--accFont: "Open Sans", Arial, sans-serif;
+	--textStyle: none;
+	--textTrans: none;
+	--fontSize: 16px;
+	--fontColor: midnightblue;
+	--main: white;
+	--bg: #8BA1EC;
+	--acc1: royalblue;
+	--acc2: lavender;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  font-size: var(--fontSize);
+	font-family: var(--bodyFont);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  background: var(--main);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1.25em 1.25em 2em 1.25em;
+}
+
+#headerContent {
+  width: 100%;
+}
+
+#headerContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+
+#themeBtnDiv {
+ 	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	padding: 0.5em 0;
+	max-width: 25em;
+ }
+ 
+ .themeBtn {
+ 	margin: 0.5em;
+ 	width: 1.5em;
+	height: 1.5em;
+	border: none;
+	border-radius: 0.25em;
+	transition: border-radius 0.1s;
+ }
+ 
+ .themeBtn:hover {
+ 	border-radius: 50%;
+ }
+ 
+ #debutTheme {
+ 	background: turquoise;
+ }
+ 
+ #fearlessTheme {
+ 	background: gold;
+ }
+ 
+ #speakNowTheme {
+ 	background: blueviolet;
+ }
+ 
+ #redTheme {
+ 	background: firebrick;
+ }
+ 
+ #ts1989Theme {
+ 	background: lightskyblue;
+ }
+ 
+ #reputationTheme {
+ 	background: black;
+ }
+ 
+ #loverTheme {
+ 	background: hotpink;
+ }
+ 
+ #folkloreTheme {
+ 	background: lightslategray;
+ }
+ 
+ #evermoreTheme {
+ 	background: chocolate;
+ }
+ 
+ #midnightsTheme {
+ 	background: royalblue;
+ }
+
+h1 {
+  color: var(--acc1);
+	text-transform: var(--textTrans);
+	font-family: var(--accFont);
+  font-weight: bold;
+  font-size: 2em;
+	font-style: var(--textStyle);
+}
+
+#searchBar {
+  display: flex;
+}
+
+#fieldDropdown {
+  font-size: inherit;
+	font-family: var(--mainFont);
+	font-style: var(--textStyle);
+  background: var(--acc1);
+  border: 2px solid var(--acc1);
+  color: var(--main);
+  padding: 0.3em 0.3em 0.3em 1em;
+  border-radius: 1.3em 0 0 1.3em;	
+}
+
+#fieldDropdown:hover {
+	background: var(--acc2);
+	color: var(--acc1);
+	border: 2px solid var(--acc1);
+}
+
+#fieldDropdown option {
+  font-size: inherit;
+  background: var(--acc2);
+  color: var(--fontColor);
+}
+
+#searchInput {
+  width: 100%;
+  font-size: inherit;
+	font-family: var(--mainFont);
+  border: none;
+  background: var(--acc2);
+  padding: 0.3em 0.5em;
+  color: var(--fontColor);
+}
+
+#searchFieldButton {
+  font-size: inherit;
+	font-family: var(--mainFont);
+	font-style: var(--textStyle);
+  border: 2px solid var(--acc1);
+  border-radius: 0 1.3em 1.3em 0;
+  background: var(--acc1);
+  color: var(--main);
+  padding: 0.3em 1em 0.3em 0.75em;
+}
+
+#searchFieldButton:hover {
+	background: var(--acc2);
+	color: var(--acc1);
+	border: 2px solid var(--acc1);
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2em 1em;
+}
+
+#mainContainer {
+  width: 100%;
+}
+
+#filterScreen {
+  color: var(--fontColor);
+  background: var(--main);
+  padding: 1em;
+}
+
+#filterAcc {
+  color: var(--acc1);
+  background: inherit;
+  border: none;
+  text-align: left;
+	font-family: var(--accFont);
+	font-style: var(--textStyle);
+	text-transform: var(--textTrans);
+  font-weight: bold;
+  font-size: 1.25em;
+  padding: 0.25em 0.5em;
+  width: 100%;
+}
+
+#filterPanel {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5em;
+}
+
+.col {
+  margin: 0.25em 0.75em;
+}
+
+.col h3 {
+  color: var(--acc1);
+  font-weight: bold;
+  padding: 0.25em 0;
+	font-family: var(--accFont);
+	text-transform: var(--textTrans);
+	font-style: var(--textStyle);
+}
+
+.checkScroll {
+  border: 1px solid var(--acc1);
+  padding: 0.5em;
+  max-height: 14em;
+  overflow: auto;
+}
+
+#miscFilters {
+  padding: 0.5em;
+}
+
+#filterSearchBtn {
+	font-family: var(--mainFont);
+  margin: 0.5em;
+  background: var(--acc1);
+  border: 2px solid var(--acc1);
+  color: var(--main);
+  padding: 0.5em 1em;
+  border-radius: 1.5em;
+	font-style: var(--textStyle);
+}
+
+#filterSearchBtn:hover {
+	background: var(--acc2);
+	color: var(--acc1);
+	border: 2px solid var(--acc1);
+}
+
+#resultsScreen {
+  margin-top: 1.5em;
+}
+
+#resultsDisplay {
+  flex-direction: column;
+}
+
+.resCard {}
+
+.resHead {
+  width: 100%;
+  text-align: left;
+	font-family: var(--accFont);
+  font-size: 1.125em;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  background: var(--main);
+  color: var(--acc1);
+  border: none;
+  border-bottom: 1px solid var(--acc2);
+}
+
+.resHead:hover {
+  background: var(--acc1);
+  color: var(--main);
+  border-bottom: var(--acc1);
+}
+
+.resPanel {
+  background: var(--acc2);
+  color: var(--fontColor);
+  padding: 0.5em 1.25em;
+  display: none;
+}
+
+.resPanel ul {
+  list-style: none;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  color: var(--main);
+  background: var(--acc1);
+  width: 100%;
+  padding: 1em;
+  font-size: 14px;
+}
+
+#footerContent {
+  display: flex;
+  flex-direction: column;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer p {
+  width: 100%;
+  padding: 0.5em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  padding: 0.25em;
+}
+
+nav a {
+  padding: 0.25em;
+}
+
+@media screen and (min-width: 600px) {
+
+  #headerContent {
+    max-width: 768px;
+  }
+
+  #mainContainer {
+    max-width: 768px;
+  }
+
+  #filterPanel {
+    flex-direction: row;
+  }
+
+  .col {
+    width: 50%;
+  }
+
+  #footerContent {
+    flex-direction: row;
+    max-width: 768px;
+  }
+
+  nav {
+    flex-direction: column;
+    width: 40%;
+  }
+}
